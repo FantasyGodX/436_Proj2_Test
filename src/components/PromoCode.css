@@ -1,0 +1,53 @@
+.promo {
+  display: grid;
+  gap: 6px;
+  font-size: 0.9rem;
+}
+
+.promo label {
+  font-weight: 700;
+}
+
+.promo__row {
+  display: flex;
+  gap: 8px;
+}
+
+.promo__row input {
+  flex: 1;
+  min-width: 0;
+  padding: 9px 14px;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  text-transform: uppercase;
+}
+
+.promo__row input:focus {
+  border-color: var(--leaf);
+  outline: none;
+}
+
+.promo__row .btn {
+  padding: 8px 18px;
+}
+
+.promo__error {
+  color: var(--danger);
+}
+
+.promo--applied {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: #e5f3e1;
+  color: var(--leaf-dark);
+}
+
+.promo--applied button {
+  border: 0;
+  background: none;
+  color: var(--leaf-dark);
+  text-decoration: underline;
+}
