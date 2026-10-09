@@ -1,11 +1,12 @@
 import { useState } from 'react'
-import { MANGOES, MAX_PER_VARIETY } from './data/mangoes'
+import { MANGOES, MAX_PER_VARIETY, PERKS } from './data/mangoes'
 import { filterAndSort } from './utils/catalog'
 import { calculateTotals } from './utils/pricing'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Toolbar from './components/Toolbar'
 import ProductGrid from './components/ProductGrid'
+import Perks from './components/Perks'
 import CartDrawer from './components/CartDrawer'
 import Footer from './components/Footer'
 import './App.css'
@@ -101,6 +102,7 @@ function App() {
             onClearFilters={clearFilters}
           />
         </section>
+        <Perks perks={PERKS} />
       </main>
       <Footer />
       <CartDrawer

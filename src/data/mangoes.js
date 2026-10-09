@@ -99,6 +99,29 @@ export const MANGOES = [
   },
 ]
 
+export const PERKS = [
+  {
+    id: 'ripe',
+    title: 'Ripened on the tree',
+    text: 'We wait for the fruit to color and soften naturally, so the sugar is already there.',
+  },
+  {
+    id: 'fresh',
+    title: 'Shipped in 48 hours',
+    text: 'Picked, packed, and on its way within two days, with no cold-storage detours.',
+  },
+  {
+    id: 'farms',
+    title: 'Family-run orchards',
+    text: 'Every variety comes from a grower we know by name and pay a fair price.',
+  },
+  {
+    id: 'promise',
+    title: 'Ripe or replaced',
+    text: 'If a mango arrives bruised or bland, tell us and we will send another.',
+  },
+]
+
 export const PROMO_CODES = {
   MANGO10: 0.1,
   SUMMER15: 0.15,

@@ -27,6 +27,7 @@
 
 .card__mango {
   width: 70%;
+  max-width: 180px;
   transition: transform 0.3s ease;
 }
 

@@ -77,7 +77,15 @@
   font-size: 0.9rem;
 }
 
+.brand__name {
+  white-space: nowrap;
+}
+
 @media (max-width: 560px) {
+  .brand__name {
+    font-size: 1.15rem;
+  }
+
   .site-nav {
     display: none;
   }
