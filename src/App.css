@@ -1,0 +1,19 @@
+.shop {
+  padding-top: 64px;
+  scroll-margin-top: 60px;
+}
+
+.section-heading {
+  margin-bottom: 28px;
+}
+
+.section-heading h2 {
+  color: var(--leaf-dark);
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+}
+
+.section-heading p {
+  margin-top: 8px;
+  color: var(--muted);
+}

@@ -1,0 +1,136 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.card__image {
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: 28px 20px 20px;
+  background: radial-gradient(
+    circle at 50% 60%,
+    color-mix(in srgb, var(--tint) 35%, #fff) 0%,
+    color-mix(in srgb, var(--tint) 10%, #fff) 70%
+  );
+}
+
+.card__mango {
+  width: 70%;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card__mango {
+  transform: rotate(-6deg) scale(1.05);
+}
+
+.card__mango--faded {
+  filter: grayscale(0.85);
+  opacity: 0.6;
+}
+
+.card__tag,
+.card__badge {
+  position: absolute;
+  padding: 3px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.card__tag {
+  top: 12px;
+  left: 12px;
+  background: #fff;
+  color: var(--leaf);
+  border: 1px solid var(--line);
+}
+
+.card__badge {
+  bottom: 12px;
+  right: 12px;
+}
+
+.card__badge--in {
+  background: var(--leaf);
+  color: #fff;
+}
+
+.card__badge--out {
+  background: var(--ink);
+  color: #fff;
+}
+
+.card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  padding: 18px 20px 20px;
+}
+
+.card__title-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.card__title-row h3 {
+  font-size: 1.35rem;
+}
+
+.card__price {
+  color: var(--mango-deep);
+  font-weight: 700;
+  font-size: 1.1rem;
+  white-space: nowrap;
+}
+
+.card__origin {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.card__blurb {
+  flex: 1;
+  font-size: 0.95rem;
+}
+
+.sweetness {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 4px;
+}
+
+.sweetness__label {
+  margin-right: 4px;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--line);
+}
+
+.dot--on {
+  background: var(--mango);
+}
+
+.card__add {
+  margin-top: 8px;
+}
