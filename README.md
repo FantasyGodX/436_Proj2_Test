@@ -2,7 +2,7 @@
 
 A single-page mango store built with React and Vite for CSC 436 (Project 2: React Fundamentals). Browse eight mango varieties, search, filter, and sort them, build a box, apply a promo code, and place a (pretend) order. The whole page is a function of state: every click updates the cart, totals, and badges instantly.
 
-**Live site:** https://YOUR-SITE-NAME.netlify.app  <!-- replace after deploying -->
+**Live site:** https://mangomoon2.netlify.app/
 
 ## Run locally
 
