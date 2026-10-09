@@ -1,0 +1,26 @@
+.site-footer {
+  margin-top: 80px;
+  padding-block: 40px;
+  background: var(--leaf-dark);
+  color: #e6f0e0;
+  text-align: center;
+}
+
+.site-footer__inner {
+  display: grid;
+  gap: 8px;
+  justify-items: center;
+}
+
+.site-footer__brand {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--sun);
+}
+
+.site-footer__legal {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
