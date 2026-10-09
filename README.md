@@ -1,16 +1,56 @@
-# React + Vite
+# Mango Grove
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A single-page mango store built with React and Vite for CSC 436 (Project 2: React Fundamentals). Browse eight mango varieties, search, filter, and sort them, build a box, apply a promo code, and place a (pretend) order. The whole page is a function of state: every click updates the cart, totals, and badges instantly.
 
-Currently, two official plugins are available:
+**Live site:** https://YOUR-SITE-NAME.netlify.app  <!-- replace after deploying -->
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Run locally
 
-## React Compiler
+Requires [Node.js](https://nodejs.org/) 20 or newer.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+npm run dev      # start the dev server at http://localhost:5173
+npm run build    # production build into dist/
+npm run preview  # serve the production build locally
+```
 
-## Expanding the Oxlint configuration
+Try the promo codes `MANGO10` and `SUMMER15`.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Project requirements
+
+| Requirement | Where to find it |
+| --- | --- |
+| Vite + React | `package.json`, `vite.config.js` |
+| 5+ components, 2+ using props | `src/components/` (14 components plus `App`; nearly all take props) |
+| 3+ independent `useState` | `App.jsx` (cart, drawer open, search, category, sort, gift box, promo, receipt) and `PromoCode.jsx` |
+| Lists with stable keys | `ProductGrid`, `CartDrawer`, `CategoryTabs`, `Perks`, `ProductCard` (all keyed by id/value, never index) |
+| Conditional rendering | Sold-out cards, "in your box" badges, empty search state, empty cart, free-shipping banner, promo error, order confirmation |
+| Controlled inputs | Search box, sort select, gift checkbox, promo code field |
+| Lifted state | `query`, `category`, and `sortBy` live in `App` and are shared by `Toolbar` and `ProductGrid`; the cart is shared by `ProductCard`, `Header`, and `CartDrawer` |
+| Netlify deploy | `netlify.toml` (build `npm run build`, publish `dist`) |
+
+## Component tree
+
+```
+App
+├── Header
+├── Hero ── MangoImage
+├── Toolbar
+│   ├── SearchBar
+│   └── CategoryTabs
+├── ProductGrid
+│   └── ProductCard ── MangoImage
+├── Perks
+├── Footer
+└── CartDrawer
+    ├── CartLine ── MangoImage
+    ├── PromoCode
+    └── OrderConfirmation ── MangoImage
+```
+
+## Notes
+
+- All mango artwork is drawn as inline SVG in `MangoImage.jsx`, so there are no image files to load and it recolors per variety through props.
+- Pricing rules (promo discounts, gift box, free shipping over $40) live in `src/utils/pricing.js`.
+- This is a class project: no payment is taken and nothing ships.
